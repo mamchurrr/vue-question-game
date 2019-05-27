@@ -1,0 +1,85 @@
+.header-top
+    border-bottom: 1px solid #3c10ce
+    &__wraper
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__items
+        display: flex
+        margin: 0
+        padding: 0
+    &__link
+        line-height: 40px
+        color: gray
+        display: block
+        padding: 0 0 0 20px
+        &_padding
+            padding: 0
+
+.header-center
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.nav
+    background: linear-gradient(to left, #7821f2, #3c10ce)
+    &__wraper
+        display: flex
+        justify-content: space-between
+    li
+        display: block
+        width: 100%      
+        a 
+            display: block
+            padding: 20px
+            font-weight: bold
+            color: #fff            
+            margin: 0 1px
+            &.router-link-active
+                background-color: #7900f2
+        
+
+.dropdown-my
+    z-index: 1
+    position: relative
+    &:hover
+        .my-dropdown-content
+            opacity: 1
+            right: 0px
+            visibility: visible
+            margin-top: 0
+            -moz-transform: scaleY(1) //* Для Firefox */
+            -ms-transform: scaleY(1) //* Для IE */
+            -webkit-transform: scaleY(1) //* Для Safari, Chrome, iOS */
+            -o-transform: scaleY(1) //* Для Opera */
+            transform: scaleY(1)
+    &__item
+        margin-bottom: 8px
+    &__button
+        height: 2em
+        width: 100%
+        font-size: 16px
+        line-height: 16px
+        background-color: #fff
+        border-radius: 5px
+        border: 2px solid #39e716
+        color: #39e716
+        &:hover
+            color: #fff
+            background-color: #39e716
+
+.my-dropdown-content
+    position: absolute
+    width: 250px
+    opacity: 0
+    right: -50px
+    top: 100%
+    visibility: hidden
+    margin-top: 10px
+    -moz-transform: scaleY(0) //* Для Firefox */
+    -ms-transform: scaleY(0) //* Для IE */
+    -webkit-transform: scaleY(0) //* Для Safari, Chrome, iOS */
+    -o-transform: scaleY(0) //* Для Opera */
+    transform: scaleY(0)
+    transition: transform .6s, margin-top .2s, opacity .4s, right .4s    
+
